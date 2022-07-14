@@ -7,15 +7,12 @@ router.get('/', (req, res) => {
     if (err) {
       return res.status(400).json({ err });
     }
-    console.log(JSON.parse(data));
     res.json(JSON.parse(data));
   })
 });
 
 router.post('/', (req, res) => {
-  const { text } = req.body;
-  console.log(req.body)
-  console.log(text)
+  const { title, text } = req.body;
   if (text.trim().length > 0) {
     fs.readFile(path.join(__dirname, "./../../../db/db.json" ), 'utf8', (err, data) => {
       if (err) {
@@ -24,8 +21,8 @@ router.post('/', (req, res) => {
 
       const notesInDB = JSON.parse(data);
       const newText = {
-        text,
-        id: notesInDB.length + 1,
+        title,
+        text
       };
       notesInDB.push(newText);
       fs.writeFile(path.join(__dirname, "./../../../db/db.json"), JSON.stringify(notesInDB), err => {
