@@ -37,6 +37,11 @@ router.post('/', (req, res) => {
   } else {
     res.status(400).json({ error: 'Todo must be provided' });
   }
+});
+
+router.delete('/:title', (req,res) => {
+  // req.params.title = object with all the parameters
+    // slice or array.filter(!title)
 })
 
 module.exports = router;
