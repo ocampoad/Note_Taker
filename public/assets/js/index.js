@@ -109,6 +109,7 @@ const handleNoteView = (e) => {
 const handleNewNoteView = (e) => {
   activeNote = {};
   renderActiveNote();
+  console.log(activeNote)
 };
 
 const handleRenderSaveBtn = () => {
