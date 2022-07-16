@@ -79,12 +79,10 @@ Since the framework of the front end was already made, I was able to focus on se
 
 Resources below helped me understand more why we need specific parts of the server. For example, why we need a middle wear and to json and parse the data. The documentation of express helped me learn other functions. Postman was helpful showing if my server was active. 
 
-- [1](https://stackoverflow.com/questions/23259168/what-are-express-json-and-express-urlencoded)
-- [2](https://www.geeksforgeeks.org/express-js-express-json-function/)
-- [3](https://expressjs.com/)
-- [4](https://web.postman.co/)
-
-
+- [{urlencoded}](https://stackoverflow.com/questions/23259168/what-are-express-json-and-express-urlencoded)
+- [stackoverflow: express](https://www.geeksforgeeks.org/express-js-express-json-function/)
+- [express.js](https://expressjs.com/)
+- [postman](https://web.postman.co/)
 
 ## Author
 
