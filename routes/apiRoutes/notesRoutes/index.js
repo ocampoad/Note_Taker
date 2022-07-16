@@ -40,6 +40,9 @@ router.post('/', (req, res) => {
 });
 
 router.delete('/:title', (req,res) => {
+  console.log(req.params.title)
+  
+  res.json(req.params.title);
   // req.params.title = object with all the parameters
     // slice or array.filter(!title)
 })
