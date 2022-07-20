@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const path = require('path')
 const fs = require("fs");
+const { uuid } = require('uuidv4');
 
 router.get('/', (req, res) => {
   fs.readFile(path.join(__dirname, "./../../../db/db.json"), 'utf-8', (err, data) => {
@@ -22,7 +23,8 @@ router.post('/', (req, res) => {
       const notesInDB = JSON.parse(data);
       const newText = {
         title,
-        text
+        text,
+        id: uuid()
       };
       notesInDB.push(newText);
       fs.writeFile(path.join(__dirname, "./../../../db/db.json"), JSON.stringify(notesInDB), err => {
